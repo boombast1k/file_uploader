@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>file id</th>
+      <th>url</th>
+    </tr>
+  </thead>
+<%# @uploads.each do |file| %>
+  <tr>
+    <td>?<%#= file.id  %></td>
+    <td>?<%#= file.url  %></td>
+  </tr>
+<%# end %>
+</table>
+<%= form_tag({ }, { multipart: true }) do %>
+  <fieldset style="width: 340px">
+    <legend>Upload new file:</legend>
+    <%= file_field_tag :upload %> <br />
+    <%= submit_tag 'Upload' %>
+  </fieldset>
+<% end %>
